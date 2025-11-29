@@ -2,12 +2,10 @@ package com.leoevg.san_dinner.presentation.screen.main.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -50,30 +48,22 @@ fun CourseSection(
             if (isChosen) {
                 Surface(
                     shape = RoundedCornerShape(50),
-                    color = Color(0xFFF3E8FF)
+                    color = chosenColorBg
                 ) {
                     Text(
                         text = stringResource(R.string.selected),
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                         fontSize = 12.sp,
-                        color = Color(0xFF9333EA),
+                        color = chosenColorText,
                     )
                 }
             }
         }
 
-        LazyRow(
+        Row(
+            modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
-            contentPadding = PaddingValues(horizontal = 4.dp)
-        ) {
-            items(firstDishes) { dish ->
-                DishCard(
-                    dish = dish,
-                    isSelected = selectedFirstDish == dish.id,
-                    accentColor = Color(0xFF9333EA),
-                    onClick = { selectedFirstDish = dish.id }
-                )
-            }
-        }
+            content = content
+        )
     }
 }
