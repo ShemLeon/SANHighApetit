@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.leoevg.san_dinner.ui.theme.Purple40
 import com.leoevg.san_dinner.ui.theme.Purple80
 @Composable
-fun FoodCard(
+fun DishCard(
     title: String,
     imageUrl: String?,
     isSelected: Boolean,
@@ -94,8 +94,8 @@ fun FoodCard(
 
 @Preview(showBackground = true)
 @Composable
-fun FoodCardPreview() {
-    FoodCard(
+fun DishCardPreview() {
+    DishCard(
         title = "Лосось на гри.",
         imageUrl = null,
         isSelected = false,

@@ -2,18 +2,28 @@ package com.leoevg.san_dinner.presentation.screen.main.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -26,40 +36,91 @@ import com.leoevg.san_dinner.ui.theme.Purple80
 
 @Composable
 fun TopSection() {
+    var language by remember { mutableStateOf("RU") }
+    var isLanguageMenuExpanded by remember { mutableStateOf(false) }
+    var notificationsEnabled by remember { mutableStateOf(true) }
+
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 24.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Date button
+        // Date
         Surface(
-            modifier = Modifier,
-            shape = RoundedCornerShape(20.dp),
-            color = Purple80
+            shape = RoundedCornerShape(50),
+            color = Color.White,
+            shadowElevation = 2.dp
         ) {
             Text(
                 text = "Суббота, 29 ноября",
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                modifier = Modifier
+                    .padding(
+                        horizontal = 16.dp,
+                        vertical = 8.dp
+                    ),
                 fontSize = 14.sp,
-                color = Purple40
+                color = Color(0xFF9333EA),
             )
         }
-
-        // Notification bell
-        IconButton(
-            onClick = { },
-            modifier = Modifier
-                .size(48.dp)
-                .background(Purple40, RoundedCornerShape(24.dp))
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Icon(
-                imageVector = Icons.Default.Notifications,
-                contentDescription = "Notifications",
-                tint = Color.White
-            )
+            // Кнопка выбора языка
+            Box {
+                Surface(
+                    shape = CircleShape,
+                    color = Color.White,
+                    shadowElevation = 2.dp,
+                    modifier = Modifier.size(40.dp)
+                ) {
+                    IconButton(onClick = { isLanguageMenuExpanded = true }) {
+                        Icon(
+                            imageVector = Icons.Default.Language,
+                            contentDescription = "Язык",
+                            tint = Color(0xFF374151)
+                        )
+                    }
+                }
+
+                DropdownMenu(
+                    expanded = isLanguageMenuExpanded,
+                    onDismissRequest = { isLanguageMenuExpanded = false }
+                ) {
+                    listOf("RU", "HE", "EN").forEach { lang ->
+                        DropdownMenuItem(
+                            text = { Text(lang) },
+                            onClick = {
+                                language = lang
+                                isLanguageMenuExpanded = false
+                            },
+                            colors = MenuDefaults.itemColors(
+                                textColor = if (language == lang) Color(0xFF9333EA) else Color.Black
+                            )
+                        )
+                    }
+                }
+            }
+            Surface(
+                shape = CircleShape,
+                color = if (notificationsEnabled) Color(0xFF9333EA) else Color.White,
+                shadowElevation = 2.dp,
+                modifier = Modifier.size(40.dp)
+            ) {
+                IconButton(onClick = { notificationsEnabled = !notificationsEnabled }) {
+                    Icon(
+                        imageVector = Icons.Default.Notifications,
+                        contentDescription = "Уведомления",
+                        tint = if (notificationsEnabled) Color.White else Color(0xFF9CA3AF)
+                    )
+                }
+            }
         }
     }
+
 }
+
 
 @Preview(showBackground = true)
 @Composable
