@@ -23,10 +23,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     // Apply innerPadding to MainScreen to handle edge-to-edge insets properly
                     Box(modifier = Modifier.padding(innerPadding)) {
-                         MainScreen(onNavigateTo = { })
+                        MainScreen(onNavigateTo = { })
                     }
-                }
-            }
         }
     }
-}
+}}}

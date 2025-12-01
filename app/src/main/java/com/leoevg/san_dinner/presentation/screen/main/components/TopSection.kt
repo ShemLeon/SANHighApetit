@@ -45,6 +45,11 @@ import android.content.res.Configuration
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.filled.Close
+
 
 @Composable
 fun TopSection(
@@ -76,7 +81,7 @@ fun TopSection(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 24.dp),
+                .padding(bottom = 10.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -165,8 +170,27 @@ fun TopSection(
 
         SnackbarHost(
             hostState = snackbarHostState,
-            modifier = Modifier.align(Alignment.BottomCenter)
+            modifier = Modifier.align(Alignment.BottomCenter),
+            snackbar = { snackbarData ->
+                Snackbar(
+                    modifier = Modifier.padding(12.dp),
+                    dismissAction = {
+                        IconButton(
+                            onClick = { snackbarData.dismiss() }
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Close,
+                                contentDescription = "Close",
+                                tint = Color.White
+                            )
+                        }
+                    }
+                ) {
+                    Text(snackbarData.visuals.message)
+                }
+            }
         )
+
     }
 }
 

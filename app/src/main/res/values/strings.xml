@@ -1,43 +1,43 @@
 <resources>
     <!-- App -->
     <string name="app_name">SAN_dinner</string>
-    
+
     <!-- User Info -->
-    <string name="name">Имя</string>
-    <string name="workerID">ID (посмотри пропуск)</string>
-    
+    <string name="name">שם</string>
+    <string name="workerID">תעודת זהות (תסתכל על התג)</string>
+
     <!-- Days of Week -->
-    <string name="monday">Понедельник</string>
-    <string name="tuesday">Вторник</string>
-    <string name="wednesday">Среда</string>
-    <string name="thursday">Четверг</string>
-    <string name="friday">Пятница</string>
-    <string name="saturday">Суббота</string>
-    <string name="sunday">Воскресенье</string>
-    
+    <string name="monday">יום שני</string>
+    <string name="tuesday">יום שלישי</string>
+    <string name="wednesday">יום רביעי</string>
+    <string name="thursday">יום חמישי</string>
+    <string name="friday">יום שישי</string>
+    <string name="saturday">שבת</string>
+    <string name="sunday">יום ראשון</string>
+
     <!-- Common -->
-    <string name="selected">Выбрано</string>
-    
+    <string name="selected">נבחר</string>
+
     <!-- Notifications -->
-    <string name="notification_enabled">в 9:30 будет уведомление</string>
-    <string name="notification_disabled">напоминание выключено</string>
-    
+    <string name="notification_enabled">תהיה התראה ב-9:30</string>
+    <string name="notification_disabled">תזכורת כבויה</string>
+
     <!-- Accessibility -->
-    <string name="language">Язык</string>
-    <string name="notifications">Уведомления</string>
-    
+    <string name="language">שפה</string>
+    <string name="notifications">התראות</string>
+
     <!-- Course Sections -->
-    <string name="first_course">Первое блюдо</string>
-    <string name="second_course">Второе блюдо</string>
-    
+    <string name="first_course">מנה ראשונה</string>
+    <string name="second_course">מנה עיקרית</string>
+
     <!-- Dishes -->
-    <string name="borscht">Борщ</string>
-    <string name="solyanka">Солянка</string>
-    <string name="mushroom_soup">Грибной суп</string>
-    <string name="steak">Стейк из…</string>
-    <string name="chicken_fillet">Куриное филе</string>
-    <string name="grilled_salmon">Лосось на гриле</string>
-    
+    <string name="borscht">בורשט</string>
+    <string name="solyanka">סוליאנקה</string>
+    <string name="mushroom_soup">מרק פטריות</string>
+    <string name="steak">סטייק מ...</string>
+    <string name="chicken_fillet">חזה עוף</string>
+    <string name="grilled_salmon">סלמון על הגריל</string>
+
     <!-- Order -->
-    <string name="order">Заказать</string>
+    <string name="order">הזמן</string>
 </resources>
