@@ -81,7 +81,7 @@ fun MainScreen(
                 notificationsEnabled = state.notificationsEnabled,
                 onNotificationsToggle = { viewModel.onEvent(MainScreenEvent.NotificationsUpdated(it)) }
             )
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(5.dp))
 
             UserInfoSection(
                 firstName = state.firstName,
@@ -90,7 +90,7 @@ fun MainScreen(
                 onWorkerIDChange = { viewModel.onEvent(MainScreenEvent.WorkerIDUpdated(it)) },
                 language = state.language
             )
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(5.dp))
 
             CourseSection(
                 title = localizedContext.getString(R.string.first_course),
@@ -121,7 +121,7 @@ fun MainScreen(
                 )
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(5.dp))
 
             CourseSection(
                 title = localizedContext.getString(R.string.second_course),

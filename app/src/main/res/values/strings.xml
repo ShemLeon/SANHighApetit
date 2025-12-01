@@ -4,7 +4,7 @@
 
     <!-- User Info -->
     <string name="name">שם</string>
-    <string name="workerID">תעודת זהות (תסתכל על התג)</string>
+    <string name="workerID">מס עובד (תסתכל על התג)</string>
 
     <!-- Days of Week -->
     <string name="monday">יום שני</string>

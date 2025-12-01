@@ -70,7 +70,7 @@ fun CourseSection(
                 ) {
                     Text(
                         text = selectedText,
-                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                         fontSize = 12.sp,
                         color = chosenColorText,
                     )

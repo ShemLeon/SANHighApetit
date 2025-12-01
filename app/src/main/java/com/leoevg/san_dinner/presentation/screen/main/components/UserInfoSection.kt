@@ -2,9 +2,13 @@ package com.leoevg.san_dinner.presentation.screen.main.components
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.OutlinedTextField
@@ -22,6 +26,9 @@ import androidx.compose.ui.unit.dp
 import com.leoevg.san_dinner.R
 import com.leoevg.san_dinner.ui.theme.Purple40
 import java.util.Locale
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.border
+import androidx.compose.foundation.background
 
 @Composable
 fun UserInfoSection(
@@ -53,35 +60,48 @@ fun UserInfoSection(
         shadowElevation = 4.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 10.dp)
+            .padding(bottom = 5.dp)
     ) {
         Column(
             modifier = Modifier.padding(10.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            OutlinedTextField(
+            BasicTextField(
                 value = firstName,
                 onValueChange = onNameChange,
-                placeholder = { Text(namePlaceholder) },
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(12.dp),
-                colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color.LightGray,
-                    focusedBorderColor = Purple40
-                )
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(40.dp)
+                    .border(1.dp, Color.LightGray, RoundedCornerShape(12.dp))
+                    .background(Color.White, RoundedCornerShape(12.dp))
+                    .padding(horizontal = 12.dp, vertical = 10.dp),
+                singleLine = true,
+                decorationBox = { innerTextField ->
+                    if (firstName.isEmpty()) {
+                        Text(namePlaceholder, color = Color.Gray)
+                    }
+                    innerTextField()
+                }
             )
 
-            OutlinedTextField(
+            BasicTextField(
                 value = workerID,
                 onValueChange = onWorkerIDChange,
-                placeholder = { Text(workerIdPlaceholder) },
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(12.dp),
-                colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color.LightGray,
-                    focusedBorderColor = Purple40
-                )
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(40.dp)
+                    .border(1.dp, Color.LightGray, RoundedCornerShape(12.dp))
+                    .background(Color.White, RoundedCornerShape(12.dp))
+                    .padding(horizontal = 12.dp, vertical = 10.dp),
+                singleLine = true,
+                decorationBox = { innerTextField ->
+                    if (workerID.isEmpty()) {
+                        Text(workerIdPlaceholder, color = Color.Gray)
+                    }
+                    innerTextField()
+                }
             )
+
         }
     }
 }
