@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            SAN_dinnerTheme {
+            SAN_dinnerTheme(darkTheme = false) {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     // Apply innerPadding to MainScreen to handle edge-to-edge insets properly
                     Box(modifier = Modifier.padding(innerPadding)) {

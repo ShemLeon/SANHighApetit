@@ -110,7 +110,7 @@ fun MainScreen(
                     notificationsEnabled = state.notificationsEnabled,
                     onNotificationsToggle = { viewModel.onEvent(MainScreenEvent.NotificationsUpdated(it)) }
                 )
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(10.dp))
                 // User information card
                 UserInfoSection(
                     firstName = state.firstName,
@@ -118,7 +118,7 @@ fun MainScreen(
                     onNameChange = { viewModel.onEvent(MainScreenEvent.NameUpdated(it)) },
                     onWorkerIDChange = { viewModel.onEvent(MainScreenEvent.WorkerIDUpdated(it)) }
                 )
-                Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.height(10.dp))
                 // First Course Section
                 CourseSection(
                     title = stringResource(R.string.first_course),
@@ -152,7 +152,7 @@ fun MainScreen(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.height(10.dp))
 
                 // Second Course Section
                 CourseSection(

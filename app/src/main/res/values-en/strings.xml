@@ -1,0 +1,43 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">SAN_dinner</string>
+    
+    <!-- User Info -->
+    <string name="name">Name</string>
+    <string name="workerID">ID (check your badge)</string>
+    
+    <!-- Days of Week -->
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    
+    <!-- Common -->
+    <string name="selected">Selected</string>
+    
+    <!-- Notifications -->
+    <string name="notification_enabled">Notification will be at 9:30</string>
+    <string name="notification_disabled">Reminder is turned off</string>
+    
+    <!-- Accessibility -->
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+    
+    <!-- Course Sections -->
+    <string name="first_course">First Course</string>
+    <string name="second_course">Main Course</string>
+    
+    <!-- Dishes -->
+    <string name="borscht">Borscht</string>
+    <string name="solyanka">Solyanka</string>
+    <string name="mushroom_soup">Mushroom Soup</string>
+    <string name="steak">Steak from...</string>
+    <string name="chicken_fillet">Chicken Fillet</string>
+    <string name="grilled_salmon">Grilled Salmon</string>
+
+    <!-- Order -->
+    <string name="order">Order</string>
+</resources>
