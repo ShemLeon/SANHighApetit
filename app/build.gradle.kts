@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.serialization)
+    id("com.google.gms.google-services") version "4.4.4" apply true
 }
 
 android {
@@ -84,4 +85,6 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose.v120)
 
     implementation(libs.kotlinx.datetime)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
 }
