@@ -1,0 +1,33 @@
+package com.leoevg.san_dinner.data.util
+
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ValueEventListener
+import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
+
+suspend fun DatabaseReference.getDataOnce(): DataSnapshot {
+    return suspendCancellableCoroutine { continuation ->
+        val listener = object : ValueEventListener {
+            // получаем "снимок" нашей БД и достаем оттуда все данные
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (continuation.isActive) {
+                    continuation.resume(snapshot)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                if (continuation.isActive) {
+                    continuation.resumeWithException(error.toException())
+                }
+            }
+        }
+        this.addListenerForSingleValueEvent(listener)
+
+        continuation.invokeOnCancellation {
+            this.removeEventListener(listener)
+        }
+    }
+}
