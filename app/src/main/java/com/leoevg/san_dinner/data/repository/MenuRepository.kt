@@ -1,5 +1,6 @@
 package com.leoevg.san_dinner.data.repository
 
+import android.util.Log
 import com.google.firebase.database.FirebaseDatabase
 import com.leoevg.san_dinner.data.util.NODE_DAYS
 import com.leoevg.san_dinner.data.util.NODE_LANG
@@ -16,7 +17,12 @@ class MenuRepository @Inject constructor(
 ) {
     suspend fun getMenu(): List<OrderItem> {
         return try {
+            // Используем Log.e (Error), чтобы точно увидеть логи
+            Log.e("MenuRepository", "!!! ЗАПРОС В FIREBASE НАЧАТ !!!")
+            
             val snapshot = firebaseDatabase.getReference(NODE_MENU).getDataOnce()
+            Log.e("MenuRepository", "!!! ОТВЕТ ПОЛУЧЕН. Количество записей: ${snapshot.childrenCount} !!!")
+            
             val menuList = mutableListOf<OrderItem>()
 
             for (child in snapshot.children) {
@@ -24,6 +30,8 @@ class MenuRepository @Inject constructor(
                 val type = child.child(NODE_TYPE).getValue(String::class.java) ?: ""
                 val picture = child.child(NODE_PICTURE).getValue(String::class.java) ?: ""
                 val vegan = child.child(NODE_VEGAN).getValue(Boolean::class.java) ?: false
+
+                Log.e("MenuRepository", "Обработка блюда: $id, Тип: $type")
 
                 val daysList = mutableListOf<String>()
                 child.child(NODE_DAYS).children.forEach { daySnapshot ->
@@ -48,8 +56,10 @@ class MenuRepository @Inject constructor(
                     )
                 )
             }
+            Log.e("MenuRepository", "!!! ИТОГОВЫЙ РАЗМЕР СПИСКА: ${menuList.size} !!!")
             menuList
         } catch (e: Exception) {
+            Log.e("MenuRepository", "!!! ОШИБКА ЗАГРУЗКИ !!!", e)
             e.printStackTrace()
             emptyList()
         }

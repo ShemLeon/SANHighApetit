@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -91,47 +93,61 @@ fun MainScreen(
             )
             Spacer(modifier = Modifier.height(5.dp))
 
-            // Main Dishes (Top)
-            if (state.mainDishes.isNotEmpty()) {
-                CourseSection(
-                    title = localizedContext.getString(R.string.first_course),
-                    isChosen = true,
-                    language = state.language
-                ) {
-                    state.mainDishes.forEach { dish ->
-                        val title = dish.lang[state.language.lowercase()] ?: dish.lang["en"] ?: dish.id
-                        DishCard(
-                            title = title,
-                            imageUrl = dish.picture.takeIf { it.isNotEmpty() },
-                            isSelected = false, // Logic for selection to be added
-                            onSelect = { },
-                            modifier = Modifier.weight(1f)
-                        )
+            if (state.isLoading) {
+                CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))
+            } else {
+                if (state.mainDishes.isEmpty() && state.sideDishes.isEmpty()) {
+                    Text(
+                        text = "ERROR: List is empty",
+                        color = Color.Red,
+                        modifier = Modifier
+                            .padding(16.dp)
+                            .align(Alignment.CenterHorizontally)
+                    )
+                }
+
+                // Main Dishes (Top)
+                if (state.mainDishes.isNotEmpty()) {
+                    CourseSection(
+                        title = localizedContext.getString(R.string.first_course),
+                        isChosen = true,
+                        language = state.language
+                    ) {
+                        state.mainDishes.forEach { dish ->
+                            val title = dish.lang[state.language.lowercase()] ?: dish.lang["en"] ?: dish.id
+                            DishCard(
+                                title = title,
+                                imageUrl = dish.picture.takeIf { it.isNotEmpty() },
+                                isSelected = false, // Logic for selection to be added
+                                onSelect = { },
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
                     }
                 }
-            }
 
-            Spacer(modifier = Modifier.height(5.dp))
+                Spacer(modifier = Modifier.height(5.dp))
 
-            // Side Dishes (Bottom)
-            if (state.sideDishes.isNotEmpty()) {
-                CourseSection(
-                    title = localizedContext.getString(R.string.second_course),
-                    isChosen = true,
-                    chosenColorBg = Color(0xFFADD8E6),
-                    chosenColorText = Color(0xFF0066CC),
-                    language = state.language
-                ) {
-                    state.sideDishes.forEach { dish ->
-                        val title = dish.lang[state.language.lowercase()] ?: dish.lang["en"] ?: dish.id
-                        DishCard(
-                            title = title,
-                            imageUrl = dish.picture.takeIf { it.isNotEmpty() },
-                            isSelected = false, // Logic for selection to be added
-                            onSelect = { },
-                            modifier = Modifier.weight(1f),
-                            borderColor = Color(0xFF0066CC)
-                        )
+                // Side Dishes (Bottom)
+                if (state.sideDishes.isNotEmpty()) {
+                    CourseSection(
+                        title = localizedContext.getString(R.string.second_course),
+                        isChosen = true,
+                        chosenColorBg = Color(0xFFADD8E6),
+                        chosenColorText = Color(0xFF0066CC),
+                        language = state.language
+                    ) {
+                        state.sideDishes.forEach { dish ->
+                            val title = dish.lang[state.language.lowercase()] ?: dish.lang["en"] ?: dish.id
+                            DishCard(
+                                title = title,
+                                imageUrl = dish.picture.takeIf { it.isNotEmpty() },
+                                isSelected = false, // Logic for selection to be added
+                                onSelect = { },
+                                modifier = Modifier.weight(1f),
+                                borderColor = Color(0xFF0066CC)
+                            )
+                        }
                     }
                 }
             }
