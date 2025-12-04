@@ -1,9 +1,9 @@
 package com.leoevg.san_dinner.data.util
 
 // Файл хранит имена, которые заданы в Firebase и нужны нам
-const val CHILD_DAY = "day"
-const val CHILD_FIRST_DISH = "first_dish"
-const val CHILD_SECOND_DISH = "second_dish"
-const val CHILD_PICTURE = "picture"
-const val CHILD_FOOD_NAME = "food_name"
-
+const val NODE_MENU = "menu"
+const val NODE_DAYS = "days"
+const val NODE_LANG = "lang"
+const val NODE_PICTURE = "picture"
+const val NODE_TYPE = "type"
+const val NODE_VEGAN = "vegan"

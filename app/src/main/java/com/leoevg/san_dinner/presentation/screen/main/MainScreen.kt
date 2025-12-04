@@ -30,7 +30,6 @@ import com.leoevg.san_dinner.presentation.screen.main.components.DishCard
 import com.leoevg.san_dinner.presentation.screen.main.components.OrderBtn
 import com.leoevg.san_dinner.presentation.screen.main.components.TopSection
 import com.leoevg.san_dinner.presentation.screen.main.components.UserInfoSection
-import com.leoevg.san_dinner.ui.theme.Purple40
 import java.util.Locale
 
 @Composable
@@ -92,66 +91,49 @@ fun MainScreen(
             )
             Spacer(modifier = Modifier.height(5.dp))
 
-            CourseSection(
-                title = localizedContext.getString(R.string.first_course),
-                isChosen = true,
-                language = state.language
-            ) {
-                DishCard(
-                    title = localizedContext.getString(R.string.borscht),
-                    imageUrl = null,
-                    isSelected = false,
-                    onSelect = { },
-                    modifier = Modifier.weight(1f)
-                )
-                DishCard(
-                    title = localizedContext.getString(R.string.solyanka),
-                    imageUrl = null,
-                    isSelected = true,
-                    onSelect = { },
-                    modifier = Modifier.weight(1f),
-                    borderColor = Purple40
-                )
-                DishCard(
-                    title = localizedContext.getString(R.string.mushroom_soup),
-                    imageUrl = null,
-                    isSelected = false,
-                    onSelect = { },
-                    modifier = Modifier.weight(1f)
-                )
+            // Main Dishes (Top)
+            if (state.mainDishes.isNotEmpty()) {
+                CourseSection(
+                    title = localizedContext.getString(R.string.first_course),
+                    isChosen = true,
+                    language = state.language
+                ) {
+                    state.mainDishes.forEach { dish ->
+                        val title = dish.lang[state.language.lowercase()] ?: dish.lang["en"] ?: dish.id
+                        DishCard(
+                            title = title,
+                            imageUrl = dish.picture.takeIf { it.isNotEmpty() },
+                            isSelected = false, // Logic for selection to be added
+                            onSelect = { },
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
             }
 
             Spacer(modifier = Modifier.height(5.dp))
 
-            CourseSection(
-                title = localizedContext.getString(R.string.second_course),
-                isChosen = true,
-                chosenColorBg = Color(0xFFADD8E6),
-                chosenColorText = Color(0xFF0066CC),
-                language = state.language
-            ) {
-                DishCard(
-                    title = localizedContext.getString(R.string.steak),
-                    imageUrl = null,
-                    isSelected = false,
-                    onSelect = { },
-                    modifier = Modifier.weight(1f)
-                )
-                DishCard(
-                    title = localizedContext.getString(R.string.chicken_fillet),
-                    imageUrl = null,
-                    isSelected = true,
-                    onSelect = { },
-                    modifier = Modifier.weight(1f),
-                    borderColor = Color(0xFF0066CC)
-                )
-                DishCard(
-                    title = localizedContext.getString(R.string.grilled_salmon),
-                    imageUrl = null,
-                    isSelected = false,
-                    onSelect = { },
-                    modifier = Modifier.weight(1f)
-                )
+            // Side Dishes (Bottom)
+            if (state.sideDishes.isNotEmpty()) {
+                CourseSection(
+                    title = localizedContext.getString(R.string.second_course),
+                    isChosen = true,
+                    chosenColorBg = Color(0xFFADD8E6),
+                    chosenColorText = Color(0xFF0066CC),
+                    language = state.language
+                ) {
+                    state.sideDishes.forEach { dish ->
+                        val title = dish.lang[state.language.lowercase()] ?: dish.lang["en"] ?: dish.id
+                        DishCard(
+                            title = title,
+                            imageUrl = dish.picture.takeIf { it.isNotEmpty() },
+                            isSelected = false, // Logic for selection to be added
+                            onSelect = { },
+                            modifier = Modifier.weight(1f),
+                            borderColor = Color(0xFF0066CC)
+                        )
+                    }
+                }
             }
 
             val isFormValid = true
