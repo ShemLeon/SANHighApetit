@@ -1,12 +1,13 @@
 package com.leoevg.san_dinner.presentation.screen.main.components
 
 import android.content.res.Configuration
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -31,7 +32,7 @@ fun CourseSection(
     chosenColorBg: Color = Purple80,
     chosenColorText: Color = Purple40,
     language: String = "RU",
-    content: @Composable RowScope.() -> Unit
+    content: @Composable () -> Unit
 ) {
     val context = LocalContext.current
     val localizedContext = remember(language) {
@@ -79,9 +80,11 @@ fun CourseSection(
         }
 
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .horizontalScroll(rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
-            content = content
+            content = { content() }
         )
     }
 }

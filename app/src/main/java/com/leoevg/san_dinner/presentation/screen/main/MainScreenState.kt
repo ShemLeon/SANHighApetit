@@ -9,5 +9,7 @@ data class MainScreenState(
     val notificationsEnabled: Boolean = true,
     val mainDishes: List<OrderItem> = emptyList(),
     val sideDishes: List<OrderItem> = emptyList(),
+    val selectedMainDishId: String? = null,
+    val selectedSideDishId: String? = null,
     val isLoading: Boolean = false
 )

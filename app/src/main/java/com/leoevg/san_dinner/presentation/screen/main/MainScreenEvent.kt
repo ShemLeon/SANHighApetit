@@ -5,4 +5,7 @@ sealed class MainScreenEvent {
     data class WorkerIDUpdated(val workerID: String) : MainScreenEvent()
     data class LanguageUpdated(val language: String) : MainScreenEvent()
     data class NotificationsUpdated(val enabled: Boolean) : MainScreenEvent()
+    data class MainDishSelected(val id: String) : MainScreenEvent()
+    data class SideDishSelected(val id: String) : MainScreenEvent()
+    data object OrderConfirmed : MainScreenEvent()
 }

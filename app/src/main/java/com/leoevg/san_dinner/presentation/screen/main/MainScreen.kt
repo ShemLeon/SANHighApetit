@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -110,7 +111,7 @@ fun MainScreen(
                 if (state.mainDishes.isNotEmpty()) {
                     CourseSection(
                         title = localizedContext.getString(R.string.first_course),
-                        isChosen = true,
+                        isChosen = state.selectedMainDishId != null,
                         language = state.language
                     ) {
                         state.mainDishes.forEach { dish ->
@@ -118,9 +119,10 @@ fun MainScreen(
                             DishCard(
                                 title = title,
                                 imageUrl = dish.picture.takeIf { it.isNotEmpty() },
-                                isSelected = false, // Logic for selection to be added
-                                onSelect = { },
-                                modifier = Modifier.weight(1f)
+                                isSelected = state.selectedMainDishId == dish.id,
+                                onSelect = { viewModel.onEvent(MainScreenEvent.MainDishSelected(dish.id)) },
+                                modifier = Modifier.width(140.dp),
+                                accentColor = Color(0xFF9333EA)
                             )
                         }
                     }
@@ -132,7 +134,7 @@ fun MainScreen(
                 if (state.sideDishes.isNotEmpty()) {
                     CourseSection(
                         title = localizedContext.getString(R.string.second_course),
-                        isChosen = true,
+                        isChosen = state.selectedSideDishId != null,
                         chosenColorBg = Color(0xFFADD8E6),
                         chosenColorText = Color(0xFF0066CC),
                         language = state.language
@@ -142,20 +144,25 @@ fun MainScreen(
                             DishCard(
                                 title = title,
                                 imageUrl = dish.picture.takeIf { it.isNotEmpty() },
-                                isSelected = false, // Logic for selection to be added
-                                onSelect = { },
-                                modifier = Modifier.weight(1f),
-                                borderColor = Color(0xFF0066CC)
+                                isSelected = state.selectedSideDishId == dish.id,
+                                onSelect = { viewModel.onEvent(MainScreenEvent.SideDishSelected(dish.id)) },
+                                modifier = Modifier.width(140.dp),
+                                accentColor = Color(0xFF0066CC)
                             )
                         }
                     }
                 }
             }
 
-            val isFormValid = true
+            val isFormValid = state.selectedMainDishId != null && state.selectedSideDishId != null
 
             OrderBtn(
-                onClick = { /* Submit */ },
+                text = localizedContext.getString(R.string.order),
+                onClick = {
+                    // Mark order as confirmed to prevent alarm
+                    viewModel.onEvent(MainScreenEvent.OrderConfirmed)
+                    // TODO: Add logic to send order to backend
+                },
                 isFormValid = isFormValid
             )
         }

@@ -29,4 +29,8 @@ class SharedPrefManager @Inject constructor(
     var notificationsEnabled: Boolean
         get() = sharedPreferences.getBoolean("notifications_enabled", true)
         set(value) = sharedPreferences.edit().putBoolean("notifications_enabled", value).apply()
+
+    var lastOrderDate: String
+        get() = sharedPreferences.getString("last_order_date", "") ?: ""
+        set(value) = sharedPreferences.edit().putString("last_order_date", value).apply()
 }

@@ -9,15 +9,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.leoevg.san_dinner.R
 
 @Composable
 fun OrderBtn(
+    text: String,
     onClick: () -> Unit,
     isFormValid: Boolean,
     modifier: Modifier = Modifier
@@ -35,7 +34,7 @@ fun OrderBtn(
         )
     ) {
         Text(
-            text = stringResource(R.string.order),
+            text = text,
             fontSize = 16.sp,
             fontWeight = FontWeight.Medium
         )
@@ -46,6 +45,7 @@ fun OrderBtn(
 @Composable
 fun OrderBtnPreview() {
     OrderBtn(
+        text = "Заказать",
         onClick = {},
         isFormValid = true
     )
