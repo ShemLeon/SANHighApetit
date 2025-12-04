@@ -2,7 +2,7 @@ package com.leoevg.san_dinner.presentation.screen.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.leoevg.san_dinner.data.local.PreferencesManager
+import com.leoevg.san_dinner.data.manager.SharedPrefManager
 import com.leoevg.san_dinner.data.repository.MenuRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainScreenViewModel @Inject constructor(
-    private val preferencesManager: PreferencesManager,
+    private val sharedPrefManager: SharedPrefManager,
     private val menuRepository: MenuRepository
 ) : ViewModel() {
 
@@ -25,10 +25,10 @@ class MainScreenViewModel @Inject constructor(
     init {
         _state.update {
             it.copy(
-                firstName = preferencesManager.firstName,
-                workerID = preferencesManager.workerID,
-                language = preferencesManager.language,
-                notificationsEnabled = preferencesManager.notificationsEnabled
+                firstName = sharedPrefManager.firstName,
+                workerID = sharedPrefManager.workerID,
+                language = sharedPrefManager.language,
+                notificationsEnabled = sharedPrefManager.notificationsEnabled
             )
         }
         loadMenu()
@@ -54,19 +54,19 @@ class MainScreenViewModel @Inject constructor(
     fun onEvent(event: MainScreenEvent) {
         when (event) {
             is MainScreenEvent.NameUpdated -> {
-                preferencesManager.firstName = event.name
+                sharedPrefManager.firstName = event.name
                 _state.update { it.copy(firstName = event.name) }
             }
             is MainScreenEvent.WorkerIDUpdated -> {
-                preferencesManager.workerID = event.workerID
+                sharedPrefManager.workerID = event.workerID
                 _state.update { it.copy(workerID = event.workerID) }
             }
             is MainScreenEvent.LanguageUpdated -> {
-                preferencesManager.language = event.language
+                sharedPrefManager.language = event.language
                 _state.update { it.copy(language = event.language) }
             }
             is MainScreenEvent.NotificationsUpdated -> {
-                preferencesManager.notificationsEnabled = event.enabled
+                sharedPrefManager.notificationsEnabled = event.enabled
                 _state.update { it.copy(notificationsEnabled = event.enabled) }
             }
         }
