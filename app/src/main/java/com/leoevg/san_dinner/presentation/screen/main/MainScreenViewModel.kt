@@ -13,6 +13,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.time.LocalDate
+import java.time.format.TextStyle
+import java.util.Locale
 import javax.inject.Inject
 
 @HiltViewModel
@@ -44,8 +46,14 @@ class MainScreenViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             _state.update { it.copy(isLoading = true) }
             val menuItems = menuRepository.getMenu()
-            val mainDishes = menuItems.filter { it.type.contains("main", ignoreCase = true) }
-            val sideDishes = menuItems.filter { it.type.contains("side", ignoreCase = true) }
+            
+            val currentDay = LocalDate.now().dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ENGLISH)
+            val filteredItems = menuItems.filter { item ->
+                item.days.any { it.equals(currentDay, ignoreCase = true) }
+            }
+
+            val mainDishes = filteredItems.filter { it.type.contains("main", ignoreCase = true) }
+            val sideDishes = filteredItems.filter { it.type.contains("side", ignoreCase = true) }
 
             _state.update {
                 it.copy(

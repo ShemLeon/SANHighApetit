@@ -27,8 +27,8 @@
     <string name="notifications">Уведомления</string>
     
     <!-- Course Sections -->
-    <string name="first_course">Первое блюдо</string>
-    <string name="second_course">Второе блюдо</string>
+    <string name="first_course">Основа </string>
+    <string name="second_course">Добавка</string>
     
     <!-- Dishes -->
     <string name="borscht">Борщ</string>

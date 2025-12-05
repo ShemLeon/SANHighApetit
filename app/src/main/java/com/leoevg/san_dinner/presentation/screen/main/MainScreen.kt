@@ -2,6 +2,8 @@ package com.leoevg.san_dinner.presentation.screen.main
 
 import android.content.res.Configuration
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -23,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -42,6 +45,7 @@ fun MainScreen(
 ) {
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
+    val focusManager = LocalFocusManager.current
 
     // Create localized context - use state.language as key (String has proper equals)
     val localizedContext = remember(state.language) {
@@ -68,6 +72,12 @@ fun MainScreen(
                     )
                 )
             )
+            .clickable( // Clear focus on outside click
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) {
+                focusManager.clearFocus()
+            }
     ) {
         Column(
             modifier = Modifier
@@ -127,8 +137,6 @@ fun MainScreen(
                         }
                     }
                 }
-
-                Spacer(modifier = Modifier.height(5.dp))
 
                 // Side Dishes (Bottom)
                 if (state.sideDishes.isNotEmpty()) {
