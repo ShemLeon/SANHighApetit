@@ -33,4 +33,12 @@ class SharedPrefManager @Inject constructor(
     var lastOrderDate: String
         get() = sharedPreferences.getString("last_order_date", "") ?: ""
         set(value) = sharedPreferences.edit().putString("last_order_date", value).apply()
+
+    var lastOrderMainDish: String
+        get() = sharedPreferences.getString("last_order_main_dish", "") ?: ""
+        set(value) = sharedPreferences.edit().putString("last_order_main_dish", value).apply()
+
+    var lastOrderSideDish: String
+        get() = sharedPreferences.getString("last_order_side_dish", "") ?: ""
+        set(value) = sharedPreferences.edit().putString("last_order_side_dish", value).apply()
 }

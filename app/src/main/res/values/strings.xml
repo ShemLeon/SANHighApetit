@@ -42,4 +42,13 @@
     <string name="order">הזמן</string>
     <string name="error_sending_form_response">שגיאה</string>
     <string name="need_to_choose_both_dishes">צריך לבחור 2 פריטים</string>
+
+    <!-- Order Accepted Screen -->
+    <string name="order_accepted">ההזמנה התקבלה!</string>
+    <string name="order_details">פרטי ההזמנה</string>
+    <string name="order_name">שם:</string>
+    <string name="order_worker_id">מס עובד:</string>
+    <string name="order_main_dish">מנה עיקרית:</string>
+    <string name="order_side_dish">תוספת:</string>
+    <string name="order_placed_on">ההזמנה בוצעה ב-</string>
 </resources>

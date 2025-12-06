@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.leoevg.san_dinner.presentation.screen.after.AfterScreen
 import com.leoevg.san_dinner.presentation.screen.main.MainScreen
+import com.leoevg.san_dinner.presentation.screen.preload.PreloadScreen
 
 @Composable
 fun MainNav(
@@ -16,8 +17,17 @@ fun MainNav(
     NavHost(
         modifier = modifier,
         navController = navHostController,
-        startDestination = Screen.Main
+        startDestination = Screen.PreLoad
     ){
+        composable<Screen.PreLoad>{
+            PreloadScreen(
+                onNavigateTo = { navigateTo ->
+                    navHostController.navigate(navigateTo) {
+                        popUpTo(Screen.PreLoad) { inclusive = true }
+                    }
+                }
+            )
+        }
         composable<Screen.Main>{
             MainScreen(
                 onNavigateTo = { navigateTo->
@@ -26,10 +36,11 @@ fun MainNav(
             )
         }
         composable<Screen.After>{
-            AfterScreen { navigateTo ->
-                navHostController.navigate(navigateTo)
-            }
+            AfterScreen(
+                onNavigateTo = { navigateTo ->
+                    navHostController.navigate(navigateTo)
+                }
+            )
         }
-
     }
 }

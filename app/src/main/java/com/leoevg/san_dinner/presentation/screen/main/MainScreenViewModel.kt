@@ -118,6 +118,10 @@ class MainScreenViewModel @AssistedInject constructor(
         val sideDishId = state.value.selectedSideDishId!!
 
         val (mainDishName, sideDishName) = getSelectedDishesNames(mainDishId, sideDishId)
+        
+        // Save selected dishes in current language for AfterScreen
+        saveOrderForAfterScreen(mainDishId, sideDishId)
+
         val response = Dispatchers.IO { googleFormApi.submitForm(
             name = state.value.firstName,
             workerId = state.value.workerID,
@@ -143,6 +147,22 @@ class MainScreenViewModel @AssistedInject constructor(
         val sideDish = state.value.sideDishes.find { it.id == sideDishId }?.lang["he"] ?: ""
 
         return Pair(mainDish, sideDish)
+    }
+    
+    private fun saveOrderForAfterScreen(mainDishId: String, sideDishId: String) {
+        // Save using current selected language or fallback to 'he' or 'en' or id
+        val currentLang = state.value.language.lowercase()
+        
+        val mainDish = state.value.mainDishes.find { it.id == mainDishId }?.let { dish ->
+            dish.lang[currentLang] ?: dish.lang["en"] ?: dish.lang["he"] ?: dish.id
+        } ?: ""
+        
+        val sideDish = state.value.sideDishes.find { it.id == sideDishId }?.let { dish ->
+            dish.lang[currentLang] ?: dish.lang["en"] ?: dish.lang["he"] ?: dish.id
+        } ?: ""
+        
+        sharedPrefManager.lastOrderMainDish = mainDish
+        sharedPrefManager.lastOrderSideDish = sideDish
     }
 
     init {

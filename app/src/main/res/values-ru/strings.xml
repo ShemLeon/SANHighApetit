@@ -42,4 +42,13 @@
     <string name="order">Заказать</string>
     <string name="error_sending_form_response">Ошибка при отправке запроса</string>
     <string name="need_to_choose_both_dishes">Надо выбрать оба блюда</string>
+
+    <!-- Order Accepted Screen -->
+    <string name="order_accepted">Заказ принят!</string>
+    <string name="order_details">Детали заказа</string>
+    <string name="order_name">Имя:</string>
+    <string name="order_worker_id">ID работника:</string>
+    <string name="order_main_dish">Основное меню:</string>
+    <string name="order_side_dish">Добавка:</string>
+    <string name="order_placed_on">Заказ оформлен </string>
 </resources>
