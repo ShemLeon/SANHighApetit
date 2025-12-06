@@ -1,0 +1,557 @@
+{
+  "BakedChickenLegsWithRootVegetables": {
+    "days": [
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Baked Chicken Legs with Root Vegetables",
+      "he": "כרעיים עוף בתנור עם ירקות שורש",
+      "ru": "Куриные ножки в духовке с корнеплодами"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/BakedChickenLegsWithRootVegetables.jpg?alt=media&token=856a1c0f-2a49-4b68-b02e-69a03126ae7d",
+    "type": "main",
+    "vegan": false
+  },
+  "BakedChickenWithVegetables": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday"
+    ],
+    "lang": {
+      "en": "Baked Chicken with Vegetables",
+      "he": "פרגית בתנור עם ירקות",
+      "ru": "Курица в духовке с овощами"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/BakedChickenWithVegetables.jpg?alt=media&token=ff2afce0-07cc-495b-a0d8-0316d686b628",
+    "type": "main",
+    "vegan": false
+  },
+  "BeefSteakWithPotato": {
+    "days": [
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Beef Steak with Potato",
+      "he": "סטייק בקר עם תפו״א",
+      "ru": "Стейк из говядины с картофелем"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/BeefSteakWithPotato.jpg?alt=media&token=26b213d9-7169-4de4-a6ca-a47d09b6c053",
+    "type": "main",
+    "vegan": false
+  },
+  "BroccoliSchnitzel": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Broccoli Schnitzel",
+      "he": "שניצל ברוקולי",
+      "ru": "Шницель из брокколи"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/BroccoliSchnitzel.jpg?alt=media&token=96ff9415-0f81-4ded-b359-ecd5ce2c48c1",
+    "type": "main",
+    "vegan": true
+  },
+  "CherryTomatoes": {
+    "days": [
+      "Tuesday"
+    ],
+    "lang": {
+      "en": "Cherry Tomatoes",
+      "he": "עגבניות שרי",
+      "ru": "Помидоры черри"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/CherryTomatoes.jpg?alt=media&token=40c2a67c-63db-4308-8b44-441596128a4c",
+    "type": "sides",
+    "vegan": true
+  },
+  "ChickenBreastWithMushrooms": {
+    "days": [
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Chicken Breast with Mushrooms in Sauce",
+      "he": "חזה עוף עם פטריות ברוטב",
+      "ru": "Куриная грудка с грибами в соусе"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/ChickenBreastWithMushrooms.jpg?alt=media&token=dbc4d2ee-eca0-4294-bd33-63a67b6f2e2e",
+    "type": "main",
+    "vegan": false
+  },
+  "ChickenLegsInTahini": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Chicken Legs in Tahini",
+      "he": "כרעיים עוף בתחינה",
+      "ru": "Куриные ножки в тхине"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/ChickenLegsInTahini.jpg?alt=media&token=8039f690-222e-48e0-8a01-68b2eab006e2",
+    "type": "main",
+    "vegan": false
+  },
+  "ChickenSteak": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Chicken Steak",
+      "he": "סטייק עוף",
+      "ru": "Куриный стейк"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/ChickenSteak.jpg?alt=media&token=1a214f27-8b14-4803-8cb5-be592721dd25",
+    "type": "main",
+    "vegan": false
+  },
+  "ChickenStripsWithRice": {
+    "days": [
+      "Wednesday"
+    ],
+    "lang": {
+      "en": "Chicken Strips with Rice in Sauce",
+      "he": "רצועות עוף עם אורז וברוטב",
+      "ru": "Полоски курицы с рисом в соусе"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/ChickenStripsWithRice.jpg?alt=media&token=d222ff8c-c514-4b48-8b25-049fa9021f7d",
+    "type": "main",
+    "vegan": false
+  },
+  "ChineseStyleFillet": {
+    "days": [
+      "Sunday"
+    ],
+    "lang": {
+      "en": "Chinese Style Fillet with Rice",
+      "he": "פילה בנוסח סיני עם אורז",
+      "ru": "Филе в китайском стиле с рисом"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/ChineseStyleFillet.jpg?alt=media&token=6a380a32-7cf7-4791-8988-a051a0c87fa1",
+    "type": "main",
+    "vegan": false
+  },
+  "Falafel": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Falafel",
+      "he": "פלאפל",
+      "ru": "Фалафель"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Falafel.jpg?alt=media&token=d503c66f-7b5c-42bb-96b4-3ff6d95d2afd",
+    "type": "main",
+    "vegan": true
+  },
+  "FishFilletInTamarind": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Fish Fillet in Tamarind",
+      "he": "פילה דג בתמר",
+      "ru": "Филе рыбы в тамаринде"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/FishFilletInTamarind.jpg?alt=media&token=f97c9a9e-d512-43c6-adb8-42d910a83b72",
+    "type": "main",
+    "vegan": false
+  },
+  "FrenchFries": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "French Fries",
+      "he": "צ׳יפס",
+      "ru": "Картофель фри"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/FrenchFries.jpg?alt=media&token=4f862f7b-03a2-41b2-9d7c-a8396ac78e34",
+    "type": "sides",
+    "vegan": true
+  },
+  "FruitsAndJuice": {
+    "days": [
+      "Friday",
+      "Saturday"
+    ],
+    "lang": {
+      "en": "Vitamins, fruits, juice",
+      "he": "ויטמינים, פירות, מיץ",
+      "ru": "Витамины, фрукты, сок"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/FruitsAndJuice.jpg?alt=media&token=b80c8b9e-893f-4b6a-81e6-991a0d88cb90",
+    "type": "side",
+    "vegan": true
+  },
+  "GreenBeans": {
+    "days": [
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Green Beans",
+      "he": "שעועית ירוקה",
+      "ru": "Зелёная фасоль"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/GreenBeans.jpg?alt=media&token=8f351172-31c6-46f7-8aaf-b5812633894b",
+    "type": "sides",
+    "vegan": true
+  },
+  "GrilledChickenBreast": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Grilled Chicken Breast",
+      "he": "חזה עוף",
+      "ru": "Куриная грудка на гриле"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/GrilledChickenBreast.jpg?alt=media&token=40f1699e-4627-4ebd-a07d-078343ee41ae",
+    "type": "main",
+    "vegan": false
+  },
+  "HomemadePizza": {
+    "days": [
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Homemade Pizza",
+      "he": "פיצה ותוספת הבית",
+      "ru": "Домашняя пицца"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/HomemadePizza.jpg?alt=media&token=03c67f37-29d5-4be1-9867-8a2a2f48fd22",
+    "type": "main",
+    "vegan": false
+  },
+  "HotSoup": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Hot Soup",
+      "he": "מרק חם",
+      "ru": "Горячий суп"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/HotSoup.jpg?alt=media&token=26abbf19-0484-4cdc-b95c-9e80800d0bd1",
+    "type": "sides",
+    "vegan": false
+  },
+  "HummusWithMeat": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Hummus with Meat",
+      "he": "חומוס בשר",
+      "ru": "Хумус с мясом"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/HummusWithMeat.jpg?alt=media&token=b15f9c63-4a27-416b-8c86-f40b83898dfa",
+    "type": "main",
+    "vegan": false
+  },
+  "Kebab": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Kebab",
+      "he": "קבב",
+      "ru": "Кабаб"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Kebab.jpg?alt=media&token=c298994b-6f9e-4456-a887-c00d1c8e1b1c",
+    "type": "main",
+    "vegan": false
+  },
+  "Marshmallow": {
+    "days": [
+      "Friday",
+      "Saturday"
+    ],
+    "lang": {
+      "en": "Marshmallow",
+      "he": "מרשמלו",
+      "ru": "Зефир на костре"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Marshmallow.jpg?alt=media&token=f91302e5-2ed9-4d6b-9f0d-97bdf17e75c3",
+    "type": "main",
+    "vegan": false
+  },
+  "MeatballsWithPotato": {
+    "days": [
+      "Monday"
+    ],
+    "lang": {
+      "en": "Meatballs with Potato in Sauce",
+      "he": "כדורי בשר עם תפו״א וירקות ברוטב",
+      "ru": "Тефтели с картофелем в соусе"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/MeatballsWithPotato.jpg?alt=media&token=0feee9b9-c287-41b2-a5b0-a9bfa37c5d82",
+    "type": "main",
+    "vegan": false
+  },
+  "MeatballsWithRice": {
+    "days": [
+      "Sunday"
+    ],
+    "lang": {
+      "en": "Meatballs with Rice and Vegetables",
+      "he": "כדורי בשר עם אורז וירקות",
+      "ru": "Тефтели с рисом и овощами"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/MeatballsWithRice.jpg?alt=media&token=2883dc3c-d622-4d9f-958d-f45c507ac686",
+    "type": "main",
+    "vegan": false
+  },
+  "MustardSchnitzel": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Mustard Schnitzel",
+      "he": "שניצל חרדל",
+      "ru": "Шницель с горчицей"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/MustardSchnitzel.jpg?alt=media&token=6ebfdfd3-288b-4c5d-85d0-d488fa3632f4",
+    "type": "main",
+    "vegan": false
+  },
+  "Ptitim": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Wednesday"
+    ],
+    "lang": {
+      "en": "Ptitim",
+      "he": "פתיתים",
+      "ru": "Птитим (израильский кускус)"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Ptitim.jpg?alt=media&token=51c2c169-91f5-4fbe-a765-9d4d5450fffd",
+    "type": "sides",
+    "vegan": true
+  },
+  "Rice": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Rice",
+      "he": "אורז",
+      "ru": "Рис"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Rice.jpg?alt=media&token=9e709458-43cd-4df1-a896-55336f9fcebc",
+    "type": "sides",
+    "vegan": true
+  },
+  "SalmonWithRice": {
+    "days": [
+      "Monday"
+    ],
+    "lang": {
+      "en": "Salmon with Rice and Vegetables",
+      "he": "אורז סלמון עם ירקות ברוטב",
+      "ru": "Рис с лососем и овощами"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/SalmonWithRice.jpg?alt=media&token=58b31cf3-9363-4855-ab7c-0635e01173e7",
+    "type": "main",
+    "vegan": false
+  },
+  "Shawarma": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Shawarma",
+      "he": "שווארמה",
+      "ru": "Шаварма"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Shawarma.jpg?alt=media&token=cb3a25c2-9552-4a7b-9a43-cdc5c2c75476",
+    "type": "main",
+    "vegan": false
+  },
+  "SpicyMeatballs": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Spicy Meatballs",
+      "he": "פריקדליות חריפות",
+      "ru": "Острые фрикадельки"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/SpicyMeatballs.jpg?alt=media&token=e28a6897-b42c-44f8-a783-aabde8cb0986",
+    "type": "main",
+    "vegan": false
+  },
+  "StewedChickenLegs": {
+    "days": [
+      "Tuesday"
+    ],
+    "lang": {
+      "en": "Stewed Chicken Legs with Vegetables",
+      "he": "כרעי עוף עם ירקות מתובשל",
+      "ru": "Тушёные куриные ножки с овощами"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/StewedChickenLegs.jpg?alt=media&token=8366a39f-0343-40df-9fed-31b7c4efb35b",
+    "type": "main",
+    "vegan": false
+  },
+  "StewedOkraInSauce": {
+    "days": [
+      "Wednesday"
+    ],
+    "lang": {
+      "en": "Stewed Okra in Sauce",
+      "he": "תבשיל במיה ברוטב",
+      "ru": "Тушёная бамия в соусе"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/StewedOkraInSauce.jpg?alt=media&token=cfb817b1-f9fc-48e7-ba1a-fd8e87e941ab",
+    "type": "main",
+    "vegan": true
+  },
+  "StirFriedRiceWithVegetables": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Stir Fried Rice with Vegetables",
+      "he": "אורז מוקפץ עם ירקות",
+      "ru": "Рис с овощами"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/StirFriedRiceWithVegetables.jpg?alt=media&token=d7aa841e-3110-4fe3-858a-8da666d4e3d8",
+    "type": "main",
+    "vegan": true
+  },
+  "Tort": {
+    "days": [
+      "Friday",
+      "Saturday"
+    ],
+    "lang": {
+      "en": "tort",
+      "he": "עוּגָה",
+      "ru": "Торт"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Friday.jpg?alt=media&token=cbb42bd7-9be7-4539-92f2-5a43575c739f",
+    "type": "main",
+    "vegan": false
+  },
+  "Uha": {
+    "days": [
+      "Friday",
+      "Saturday"
+    ],
+    "lang": {
+      "en": "Fish soup on a fire",
+      "he": "מרק דגים על האש",
+      "ru": "Уха на костре"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/Uha.jpg?alt=media&token=aa41e699-84dd-4093-ba65-89aa085705e5",
+    "type": "main",
+    "vegan": true
+  },
+  "VegetableMeatballs": {
+    "days": [
+      "Sunday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Vegetable Meatballs",
+      "he": "פריקדליות צמחוני",
+      "ru": "Овощные фрикадельки"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/VegetableMeatballs.jpg?alt=media&token=70e7989c-c8df-4b28-87c3-ad1c1d1386d0",
+    "type": "main",
+    "vegan": true
+  },
+  "VegetableSaladWithTofu": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday"
+    ],
+    "lang": {
+      "en": "Vegetable Salad with Tofu",
+      "he": "סלט ירקות עם טופו",
+      "ru": "Овощной салат с тофу"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/VegetableSaladWithTofu.jpg?alt=media&token=e2ea2e4a-b262-44fb-8ecc-27c123cf97e7",
+    "type": "main",
+    "vegan": true
+  },
+  "ZucchiniInTomatoSauce": {
+    "days": [
+      "Thursday"
+    ],
+    "lang": {
+      "en": "Zucchini in Tomato Sauce",
+      "he": "קישוא ברוטב עגבניות",
+      "ru": "Кабачки в томатном соусе"
+    },
+    "picture": "https://firebasestorage.googleapis.com/v0/b/sanfoodmenu.firebasestorage.app/o/ZucchiniInTomatoSauce.jpg?alt=media&token=f5681486-476c-4e7a-928b-4d2acfbeb251",
+    "type": "sides",
+    "vegan": true
+  }
+}
