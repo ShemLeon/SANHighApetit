@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import com.leoevg.san_dinner.presentation.navigation.MainNav
 import com.leoevg.san_dinner.presentation.screen.main.MainScreen
 import com.leoevg.san_dinner.ui.theme.SAN_dinnerTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     // Apply innerPadding to MainScreen to handle edge-to-edge insets properly
                     Box(modifier = Modifier.padding(innerPadding)) {
-                        MainScreen(onNavigateTo = { })
+                        MainNav(navHostController = rememberNavController())
                     }
         }
     }

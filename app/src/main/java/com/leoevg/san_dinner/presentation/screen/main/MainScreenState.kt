@@ -11,5 +11,6 @@ data class MainScreenState(
     val sideDishes: List<OrderItem> = emptyList(),
     val selectedMainDishId: String? = null,
     val selectedSideDishId: String? = null,
+    val responseSentSuccessfully: Boolean? = null,
     val isLoading: Boolean = false
 )

@@ -30,6 +30,7 @@ import java.util.Locale
 
 @Composable
 fun CourseSection(
+    modifier: Modifier = Modifier,
     title: String,
     isChosen: Boolean = false,
     chosenColorBg: Color = Purple80,
@@ -52,7 +53,7 @@ fun CourseSection(
     val selectedText = localizedContext.getString(R.string.selected)
 
     Column(
-        modifier = Modifier.padding(bottom = 5.dp)
+        modifier = modifier.padding(bottom = 5.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -83,6 +84,7 @@ fun CourseSection(
 
         Row(
             modifier = Modifier
+                .padding(top = 5.dp)
                 .fillMaxWidth()
                 .horizontalScroll(rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(12.dp),

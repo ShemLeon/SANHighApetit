@@ -8,11 +8,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
@@ -26,6 +28,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -41,7 +44,9 @@ import java.util.Locale
 @Composable
 fun MainScreen(
     onNavigateTo: (Screen) -> Unit = {},
-    viewModel: MainScreenViewModel = hiltViewModel()
+    viewModel: MainScreenViewModel = hiltViewModel(creationCallback = { factory: MainScreenViewModel.Factory ->
+        factory.create(onNavigateTo)
+    })
 ) {
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
@@ -120,6 +125,7 @@ fun MainScreen(
                 // Main Dishes (Top)
                 if (state.mainDishes.isNotEmpty()) {
                     CourseSection(
+                        modifier = Modifier.padding(top = 10.dp),
                         title = localizedContext.getString(R.string.first_course),
                         isChosen = state.selectedMainDishId != null,
                         language = state.language
@@ -141,6 +147,7 @@ fun MainScreen(
                 // Side Dishes (Bottom)
                 if (state.sideDishes.isNotEmpty()) {
                     CourseSection(
+                        modifier = Modifier.padding(top = 10.dp),
                         title = localizedContext.getString(R.string.second_course),
                         isChosen = state.selectedSideDishId != null,
                         chosenColorBg = Color(0xFFADD8E6),
@@ -164,12 +171,22 @@ fun MainScreen(
 
             val isFormValid = state.selectedMainDishId != null && state.selectedSideDishId != null
 
+            if (state.responseSentSuccessfully != null && state.responseSentSuccessfully == false) {
+                Text(
+                    modifier = Modifier
+                        .fillMaxWidth(0.9f)
+                        .background(Color.Red, RoundedCornerShape(15.dp))
+                        .padding(12.dp),
+                    text = stringResource(R.string.error_sending_form_response)
+                )
+            }
             OrderBtn(
+                modifier = Modifier
+                    .padding(top = 30.dp),
                 text = localizedContext.getString(R.string.order),
                 onClick = {
                     // Mark order as confirmed to prevent alarm
                     viewModel.onEvent(MainScreenEvent.OrderConfirmed)
-                    // TODO: Add logic to send order to backend
                 },
                 isFormValid = isFormValid
             )

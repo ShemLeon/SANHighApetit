@@ -25,7 +25,7 @@
     <!-- Accessibility -->
     <string name="language">Язык</string>
     <string name="notifications">Уведомления</string>
-    
+
     <!-- Course Sections -->
     <string name="first_course">Основа </string>
     <string name="second_course">Добавка</string>
@@ -40,4 +40,6 @@
     
     <!-- Order -->
     <string name="order">Заказать</string>
+    <string name="error_sending_form_response">Ошибка при отправке запроса</string>
+    <string name="need_to_choose_both_dishes">Надо выбрать оба блюда</string>
 </resources>
