@@ -94,9 +94,7 @@ fun MainScreen(
         ) {
             TopSection(
                 language = state.language,
-                onLanguageChange = { viewModel.onEvent(MainScreenEvent.LanguageUpdated(it)) },
-                notificationsEnabled = state.notificationsEnabled,
-                onNotificationsToggle = { viewModel.onEvent(MainScreenEvent.NotificationsUpdated(it)) }
+                onLanguageChange = { viewModel.onEvent(MainScreenEvent.LanguageUpdated(it)) }
             )
             Spacer(modifier = Modifier.height(5.dp))
 

@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.leoevg.san_dinner.data.googleFormsApi.GoogleFormApi
 import com.leoevg.san_dinner.data.manager.SharedPrefManager
 import com.leoevg.san_dinner.data.repository.MenuRepository
-import com.leoevg.san_dinner.presentation.alarm.AlarmScheduler
 import com.leoevg.san_dinner.presentation.navigation.Screen
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
@@ -31,7 +30,6 @@ class MainScreenViewModel @AssistedInject constructor(
     private val sharedPrefManager: SharedPrefManager,
     private val menuRepository: MenuRepository,
     private val googleFormApi: GoogleFormApi,
-    alarmScheduler: AlarmScheduler,
     @Assisted private val navigateTo: (Screen) -> Unit
 ) : ViewModel() {
 
@@ -167,9 +165,6 @@ class MainScreenViewModel @AssistedInject constructor(
 
     init {
         loadMenu()
-
-        // Устанавливаем будильник при запуске
-        alarmScheduler.scheduleDailyAlarm()
     }
 
     @AssistedFactory

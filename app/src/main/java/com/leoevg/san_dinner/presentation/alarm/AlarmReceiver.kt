@@ -37,11 +37,7 @@ class AlarmReceiver : BroadcastReceiver() {
                 dayOfWeek == DayOfWeek.THURSDAY
 
         if (isWorkingDay) {
-            val lastOrder = sharedPrefManager.lastOrderDate
-            // Если дата последнего заказа не совпадает с сегодняшней
-            if (lastOrder != today.toString()) {
-                showNotification(context)
-            }
+            showNotification(context)
         }
     }
 
@@ -69,7 +65,7 @@ class AlarmReceiver : BroadcastReceiver() {
         )
 
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.mipmap.ic_launcher) // Убедитесь, что иконка существует, иначе используйте android.R.drawable.ic_dialog_info
+            .setSmallIcon(R.mipmap.ic_launcher)
             .setContentTitle("Не забудьте заказать еду!")
             .setContentText("Время 9:30, а вы еще не сделали заказ на сегодня.")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
