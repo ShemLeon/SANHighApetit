@@ -4,7 +4,7 @@
     
     <!-- User Info -->
     <string name="name">Имя</string>
-    <string name="workerID">ID (посмотри пропуск)</string>
+    <string name="workerID">ID (посмотри пропуск) или фамилия</string>
     
     <!-- Days of Week -->
     <string name="monday">Понедельник</string>
@@ -28,16 +28,9 @@
 
     <!-- Course Sections -->
     <string name="first_course">Основа </string>
-    <string name="second_course">Добавка</string>
+    <string name="second_course">Гарнир</string>
     
-    <!-- Dishes -->
-    <string name="borscht">Борщ</string>
-    <string name="solyanka">Солянка</string>
-    <string name="mushroom_soup">Грибной суп</string>
-    <string name="steak">Стейк из…</string>
-    <string name="chicken_fillet">Куриное филе</string>
-    <string name="grilled_salmon">Лосось на гриле</string>
-    
+
     <!-- Order -->
     <string name="order">Заказать</string>
     <string name="error_sending_form_response">Ошибка при отправке запроса</string>
@@ -49,6 +42,6 @@
     <string name="order_name">Имя:</string>
     <string name="order_worker_id">ID работника:</string>
     <string name="order_main_dish">Основное меню:</string>
-    <string name="order_side_dish">Добавка:</string>
+    <string name="order_side_dish">Гарнир:</string>
     <string name="order_placed_on">Заказ оформлен </string>
 </resources>

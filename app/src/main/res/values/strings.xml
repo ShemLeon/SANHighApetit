@@ -30,15 +30,7 @@
     <string name="first_course">מנה ראשונה</string>
     <string name="second_course">מנה עיקרית</string>
 
-    <!-- Dishes -->
-    <string name="borscht">בורשט</string>
-    <string name="solyanka">סוליאנקה</string>
-    <string name="mushroom_soup">מרק פטריות</string>
-    <string name="steak">סטייק מ...</string>
-    <string name="chicken_fillet">חזה עוף</string>
-    <string name="grilled_salmon">סלמון על הגריל</string>
-
-    <!-- Order -->
+     <!-- Order -->
     <string name="order">הזמן</string>
     <string name="error_sending_form_response">שגיאה</string>
     <string name="need_to_choose_both_dishes">צריך לבחור 2 פריטים</string>

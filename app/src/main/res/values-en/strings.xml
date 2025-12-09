@@ -4,7 +4,7 @@
     
     <!-- User Info -->
     <string name="name">Name</string>
-    <string name="workerID">ID (check your badge)</string>
+    <string name="workerID">ID (check your badge) or Last name</string>
     
     <!-- Days of Week -->
     <string name="monday">Monday</string>
@@ -29,17 +29,18 @@
     <!-- Course Sections -->
     <string name="first_course">First Course</string>
     <string name="second_course">Main Course</string>
-    
-    <!-- Dishes -->
-    <string name="borscht">Borscht</string>
-    <string name="solyanka">Solyanka</string>
-    <string name="mushroom_soup">Mushroom Soup</string>
-    <string name="steak">Steak from...</string>
-    <string name="chicken_fillet">Chicken Fillet</string>
-    <string name="grilled_salmon">Grilled Salmon</string>
 
     <!-- Order -->
     <string name="order">Order</string>
     <string name="error_sending_form_response">Error sending form response</string>
     <string name="need_to_choose_both_dishes">Need to choose both dishes</string>
+
+    <!-- Order Accepted Screen -->
+    <string name="order_accepted">Order Accepted!</string>
+    <string name="order_details">Order Details</string>
+    <string name="order_name">Name:</string>
+    <string name="order_worker_id">Worker ID:</string>
+    <string name="order_main_dish">Main Dish:</string>
+    <string name="order_side_dish">Side Dish:</string>
+    <string name="order_placed_on">Order placed on </string>
 </resources>
