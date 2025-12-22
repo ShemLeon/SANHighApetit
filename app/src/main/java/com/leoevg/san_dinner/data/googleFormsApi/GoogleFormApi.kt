@@ -32,3 +32,12 @@ interface GoogleFormApi {
         @Field("entry.184144520") selectedDishesNames: String
     ): Response<Unit>
  */
+
+/*
+тестовые параметры
+@POST("forms/u/0/d/e/1FAIpQLSfDPadKqzUgB7XcPaXmog5y4jC4sE4B21Tvv8GxvNva8_9gsw/formResponse?&submit=Submit")
+suspend fun submitForm(
+    @Field("entry.499752462") name: String,
+    @Field("entry.667986601") workerId: String,
+    @Field("entry.184144520") selectedDishesNames: String
+*/
