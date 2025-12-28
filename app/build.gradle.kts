@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId = "com.leoevg.san_dinner"
-        minSdk = 33
+        minSdk = 29
         targetSdk = 36
         versionCode = 2
         versionName = "1.1"
