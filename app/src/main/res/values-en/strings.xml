@@ -43,4 +43,5 @@
     <string name="order_main_dish">Main Dish:</string>
     <string name="order_side_dish">Side Dish:</string>
     <string name="order_placed_on">Order placed on </string>
+    <string name="close_app">Close</string>
 </resources>

@@ -44,4 +44,5 @@
     <string name="order_main_dish">Основное меню:</string>
     <string name="order_side_dish">Гарнир:</string>
     <string name="order_placed_on">Заказ оформлен </string>
+    <string name="close_app">Закрыть</string>
 </resources>
