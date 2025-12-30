@@ -43,5 +43,5 @@
     <string name="order_main_dish">מנה עיקרית:</string>
     <string name="order_side_dish">תוספת:</string>
     <string name="order_placed_on">ההזמנה בוצעה ב-</string>
-    <string name="close_app">Close</string>
+    <string name="close_app">לסגור</string>
 </resources>
